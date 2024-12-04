@@ -7,7 +7,7 @@ export default function Home() {
       <nav className="bg-gray-800 py-6 shadow-lg">
         <div className="container mx-auto flex justify-center items-center space-x-10">
           <Link href="/">
-            <span className="text-xl font-extralight hover:text-purple-400 cursor-pointer">
+            <span className="text-xl font-extralight hover:text-purple-400 cursor-pointer translate-x-11">
               Home
             </span>
           </Link>
@@ -35,7 +35,7 @@ export default function Home() {
           />
         </div>
 
-        {/* Title */}
+  
         <h1 className="text-5xl font-extrabold mt-10">Welcome to My Next.js Blog</h1>
         <p className="text-lg mt-4 text-gray-400">
           Explore the power of Next.js with our comprehensive guides and blogs.
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Footer */}
+   
       <footer className="bg-gray-800 text-gray-400 py-6 mt-16">
         <div className="container mx-auto text-center">
           <p>© {new Date().getFullYear()} My Next.js Blog | All Rights Reserved.</p>

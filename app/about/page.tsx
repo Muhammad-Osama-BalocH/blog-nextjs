@@ -1,118 +1,81 @@
+import React from 'react';
+
 export default function About() {
-    const versionChanges = [
-      {
-        version: "13.4",
-        changes: [
-          "Introduction of App Router for improved server and client component integration.",
-          "Enhanced support for nested layouts and loading/error states.",
-          "Improved performance with the Turbopack build tool.",
-        ],
-      },
-      {
-        version: "13.2",
-        changes: [
-          "Stable release of Turbopack, a faster Webpack replacement.",
-          "Better middleware handling for edge runtime.",
-          "Introduced experimental React Server Components.",
-        ],
-      },
-      {
-        version: "12.0",
-        changes: [
-          "Added middleware support for edge computing.",
-          "Integrated ESLint for code quality.",
-          "Prepared for compatibility with React 18.",
-        ],
-      },
-    ];
-  
-    return (
-      <div className="bg-slate-950 min-h-screen">
-        {/* Header */}
-        <header className="bg-purple-700 text-white py-12">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl font-bold">About Next.js</h1>
-            <p className="text-xl mt-4">
-              Explore the powerful features and evolution of the Next.js framework.
-            </p>
-          </div>
-        </header>
-  
-        {/* Main Content */}
-        <main className="container mx-auto py-10 px-6">
-          {/* Introduction Section */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-purple-600">What is Next.js?</h2>
-            <p className="text-lg text-white leading-relaxed">
-              Next.js is a React-based framework for building scalable, high-performance web
-              applications. It supports advanced features like Server-Side Rendering (SSR),
-              Static Site Generation (SSG), and API routes, offering developers flexibility
-              and efficiency in modern web development.
-            </p>
-          </section>
-  
-          {/* Version Changes Section */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-purple-600">
-              What&apos;s New in Next.js Versions?
-            </h2>
-            {versionChanges.map((version, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-lg p-6 mb-6 hover:shadow-xl transition-all"
-              >
-                <h3 className="text-2xl font-semibold text-purple-700">
-                  Version {version.version}
-                </h3>
-                <ul className="list-disc pl-6 mt-4 text-gray-800">
-                  {version.changes.map((change, idx) => (
-                    <li key={idx} className="text-lg mb-2">
-                      {change}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </section>
-  
-          {/* Blogs Section */}
-          <section>
-            <h2 className="text-3xl font-bold mb-4 text-purple-600">Blogs and Resources</h2>
-            <p className="text-lg text-emerald-400 leading-relaxed">
-              The Next.js community and official team regularly share valuable insights through
-              blogs. Stay updated with:
-            </p>
-            <ul className="list-disc pl-6 mt-4 text-amber-800 space-y-3">
-              <li>
-                <strong>Performance Optimization:</strong> Learn techniques to optimize rendering and asset delivery.
-              </li>
-              <li>
-                <strong>Latest Features:</strong> Understand new updates in Next.js versions and how to leverage them.
-              </li>
-              <li>
-                <strong>Case Studies:</strong> Explore how leading companies use Next.js for scalability and performance.
-              </li>
-            </ul>
-            <div className="mt-6 text-center">
-              <a
-                href="/blog"
-                className="inline-block px-6 py-3 bg-purple-600 text-white font-bold rounded-lg shadow-md hover:bg-purple-700 transition-all"
-              >
-                Read Our Blogs
-              </a>
-            </div>
-          </section>
-        </main>
-  
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white py-8">
-          <div className="container mx-auto text-center">
-            <p className="text-sm">
-              © {new Date().getFullYear()} My Next.js Blog | All Rights Reserved.
-            </p>
-          </div>
-        </footer>
+  return (
+    <div className="relative min-h-screen bg-gradient-to-br from-black via-amber-400 to-blue-300 overflow-hidden">
+ 
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 left-0 w-80 h-80 bg-blue-400 opacity-30 rounded-full blur-[120px] animate-spin-slow"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400 opacity-30 rounded-full blur-[150px] animate-pulse"></div>
       </div>
-    );
-  }
-  
+
+   
+      <div className="container mx-auto px-6 py-12 text-white">
+        <h1 className="text-5xl font-extrabold mb-8 text-center leading-tight tracking-tight drop-shadow-lg">
+          About Our Blog
+        </h1>
+        <p className="text-lg mb-10 text-center max-w-3xl mx-auto leading-relaxed">
+          Welcome to our blog! We&#39;re committed to sharing knowledge, insights, and inspiration 
+          to empower a community of learners and thinkers.
+        </p>
+
+ 
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
+            <p className="text-base leading-relaxed">
+              To educate, inspire, and empower our readers by delivering high-quality, engaging 
+              content that sparks curiosity and fosters growth.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">What We Cover</h2>
+            <ul className="list-disc list-inside space-y-2 pl-4">
+              <li>Cutting-edge technology and innovation</li>
+              <li>Programming tutorials and resources</li>
+              <li>Personal development and productivity tips</li>
+              <li>Web development trends and best practices</li>
+              <li>Deep dives into artificial intelligence</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">Who We Are</h2>
+            <p className="text-base leading-relaxed">
+              A passionate team of writers, developers, and creators who believe in the 
+              transformative power of sharing knowledge and building a curious, collaborative 
+              community.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-4">Join Our Community</h2>
+            <p className="text-base leading-relaxed">
+              Be part of our growing community. Share your thoughts, engage in discussions, 
+              and connect with us through our blog or social platforms. Together, we can grow 
+              and learn.
+            </p>
+          </div>
+        </div>
+
+     
+        <div className="mt-14 text-center">
+          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+          <p className="text-base leading-relaxed">
+            Have questions, feedback, or just want to say hi? Email us at{' '}
+            <a
+              href="mailto:contact@ourblog.com"
+              className="underline decoration-dotted text-yellow-300 hover:text-yellow-400 transition"
+            >
+              contact@ourblog.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+    
+      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-pink-400 opacity-20 rounded-full blur-[150px] animate-spin-slow"></div>
+    </div>
+  );
+}
